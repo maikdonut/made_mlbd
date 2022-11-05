@@ -26,8 +26,9 @@ WHERE scrobbles_lastfm IN (
    SELECT MAX(scrobbles_lastfm)
    FROM artists
 )
-Результат записан в файл task_a.csv
 ```
+Результат записан в файл task_a.csv
+
  __b). Самый популярный тэг на ластфм__
  ```sql
 SELECT tag, count(*) as tag_val 
@@ -37,9 +38,10 @@ WHERE tag != ''
 GROUP BY tag
 SORT BY tag_val DESC
 LIMIT 3
+ ```
 На первом месте увидем nan, поэтому возьмем второе значение
 Результат записан в файл task_b.csv
- ```
+
  __c). Самые популярные исполнители 10 самых популярных тегов ластфм__
  ```sql
 WITH top_tags as (
