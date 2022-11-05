@@ -69,7 +69,7 @@ LIMIT 10
 ```
 Результат записан в файл task_c.csv
 
- __d). Топ 10 исполнителей в США__
+ __d). Топ 10 исполнителей в США по количеству слушателей на last.fm__
  ```sql
 SELECT artist_lastfm, country_lastfm, listeners_lastfm
 FROM artists 
